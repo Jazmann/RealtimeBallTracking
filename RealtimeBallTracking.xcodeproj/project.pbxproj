@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		099AC3231624393400E12E63 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 099AC3221624393400E12E63 /* Default-568h@2x.png */; };
-		099AC32616243B6E00E12E63 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099AC32516243B6E00E12E63 /* opencv2.framework */; };
 		099AC3281624473800E12E63 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099AC3271624473800E12E63 /* AssetsLibrary.framework */; };
+		09D7C5131627177200D82343 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D7C5121627177200D82343 /* opencv2.framework */; };
 		5CAD0B7415A6DAE500B9C56C /* default_320.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CAD0B6E15A6DAE500B9C56C /* default_320.png */; };
 		5CAD0B7515A6DAE500B9C56C /* default_640.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CAD0B6F15A6DAE500B9C56C /* default_640.png */; };
 		5CAD0B7615A6DAE500B9C56C /* opencv-logo57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CAD0B7015A6DAE500B9C56C /* opencv-logo57.png */; };
@@ -39,6 +39,7 @@
 		099AC3221624393400E12E63 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		099AC32516243B6E00E12E63 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../../../openCV_Dev/ios/opencv2.framework; sourceTree = "<group>"; };
 		099AC3271624473800E12E63 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		09D7C5121627177200D82343 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../openCV_Dev/ios/opencv2.framework; sourceTree = "<group>"; };
 		5CAD0B6E15A6DAE500B9C56C /* default_320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_320.png; path = RealtimeBallTracking/default_320.png; sourceTree = SOURCE_ROOT; };
 		5CAD0B6F15A6DAE500B9C56C /* default_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_640.png; path = RealtimeBallTracking/default_640.png; sourceTree = SOURCE_ROOT; };
 		5CAD0B7015A6DAE500B9C56C /* opencv-logo57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opencv-logo57.png"; path = "RealtimeBallTracking/opencv-logo57.png"; sourceTree = SOURCE_ROOT; };
@@ -77,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D7C5131627177200D82343 /* opencv2.framework in Frameworks */,
 				099AC3281624473800E12E63 /* AssetsLibrary.framework in Frameworks */,
-				099AC32616243B6E00E12E63 /* opencv2.framework in Frameworks */,
 				B5226A90159263470060A8E5 /* CoreImage.framework in Frameworks */,
 				B5226A8E159263240060A8E5 /* CoreMedia.framework in Frameworks */,
 				B5226A8C159263150060A8E5 /* AVFoundation.framework in Frameworks */,
@@ -107,6 +108,7 @@
 		B5226A531592628E0060A8E5 = {
 			isa = PBXGroup;
 			children = (
+				09D7C5121627177200D82343 /* opencv2.framework */,
 				099AC3221624393400E12E63 /* Default-568h@2x.png */,
 				B5A3BB7E15A20387008270DC /* images */,
 				B516B2471595A8E200787FA1 /* View Controllers */,
@@ -345,8 +347,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../openCV_Dev/ios/\"",
-					"\"$(SRCROOT)/../../../../../openCV_Dev/ios\"",
+					"\"$(SRCROOT)/../../../openCV_Dev/ios/\"",
+					"\"$(SRCROOT)/../../../openCV_Dev/ios\"",
+					"\"$(SRCROOT)/../../../openCV_Dev/ios\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealtimeBallTracking/RealtimeBallTracking-Prefix.pch";
@@ -363,8 +366,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../openCV_Dev/ios/\"",
-					"\"$(SRCROOT)/../../../../../openCV_Dev/ios\"",
+					"\"$(SRCROOT)/../../../openCV_Dev/ios/\"",
+					"\"$(SRCROOT)/../../../openCV_Dev/ios\"",
+					"\"$(SRCROOT)/../../../openCV_Dev/ios\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealtimeBallTracking/RealtimeBallTracking-Prefix.pch";
