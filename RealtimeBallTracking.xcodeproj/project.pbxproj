@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0940EDB9167B85DB00CA303C /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0940EDB6167B85DB00CA303C /* libc++.1.dylib */; };
+		0940EDBA167B85DB00CA303C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0940EDB7167B85DB00CA303C /* libc++.dylib */; };
+		0940EDBB167B85DB00CA303C /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0940EDB8167B85DB00CA303C /* libc++abi.dylib */; };
 		099AC3231624393400E12E63 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 099AC3221624393400E12E63 /* Default-568h@2x.png */; };
 		099AC3281624473800E12E63 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099AC3271624473800E12E63 /* AssetsLibrary.framework */; };
 		09D7C5131627177200D82343 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D7C5121627177200D82343 /* opencv2.framework */; };
@@ -36,8 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0940EDB6167B85DB00CA303C /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "usr/lib/libc++.1.dylib"; sourceTree = SDKROOT; };
+		0940EDB7167B85DB00CA303C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		0940EDB8167B85DB00CA303C /* libc++abi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; };
 		099AC3221624393400E12E63 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		099AC32516243B6E00E12E63 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../../../openCV_Dev/ios/opencv2.framework; sourceTree = "<group>"; };
 		099AC3271624473800E12E63 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		09D7C5121627177200D82343 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../openCV_Dev/ios/opencv2.framework; sourceTree = "<group>"; };
 		5CAD0B6E15A6DAE500B9C56C /* default_320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_320.png; path = RealtimeBallTracking/default_320.png; sourceTree = SOURCE_ROOT; };
@@ -78,6 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0940EDB9167B85DB00CA303C /* libc++.1.dylib in Frameworks */,
+				0940EDBA167B85DB00CA303C /* libc++.dylib in Frameworks */,
+				0940EDBB167B85DB00CA303C /* libc++abi.dylib in Frameworks */,
 				09D7C5131627177200D82343 /* opencv2.framework in Frameworks */,
 				099AC3281624473800E12E63 /* AssetsLibrary.framework in Frameworks */,
 				B5226A90159263470060A8E5 /* CoreImage.framework in Frameworks */,
@@ -108,7 +116,9 @@
 		B5226A531592628E0060A8E5 = {
 			isa = PBXGroup;
 			children = (
-				09D7C5121627177200D82343 /* opencv2.framework */,
+				0940EDB6167B85DB00CA303C /* libc++.1.dylib */,
+				0940EDB7167B85DB00CA303C /* libc++.dylib */,
+				0940EDB8167B85DB00CA303C /* libc++abi.dylib */,
 				099AC3221624393400E12E63 /* Default-568h@2x.png */,
 				B5A3BB7E15A20387008270DC /* images */,
 				B516B2471595A8E200787FA1 /* View Controllers */,
@@ -130,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				099AC3271624473800E12E63 /* AssetsLibrary.framework */,
-				099AC32516243B6E00E12E63 /* opencv2.framework */,
+				09D7C5121627177200D82343 /* opencv2.framework */,
 				B5226A8F159263470060A8E5 /* CoreImage.framework */,
 				B5226A8D159263240060A8E5 /* CoreMedia.framework */,
 				B5226A8B159263150060A8E5 /* AVFoundation.framework */,
@@ -345,12 +355,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../openCV_Dev/ios/\"",
-					"\"$(SRCROOT)/../../../openCV_Dev/ios\"",
-					"\"$(SRCROOT)/../../../openCV_Dev/ios\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "\"$(SRCROOT)/../../../openCV_Dev/ios\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealtimeBallTracking/RealtimeBallTracking-Prefix.pch";
 				INFOPLIST_FILE = "RealtimeBallTracking/RealtimeBallTracking-Info.plist";
@@ -364,12 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../openCV_Dev/ios/\"",
-					"\"$(SRCROOT)/../../../openCV_Dev/ios\"",
-					"\"$(SRCROOT)/../../../openCV_Dev/ios\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../../openCV_Dev/ios\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealtimeBallTracking/RealtimeBallTracking-Prefix.pch";
 				INFOPLIST_FILE = "RealtimeBallTracking/RealtimeBallTracking-Info.plist";
